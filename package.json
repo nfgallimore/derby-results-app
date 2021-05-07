@@ -7,10 +7,10 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ./out/electron/index.js",
-    "cjw": "yarn run build && yarn run start"
+    "timer": "yarn run build && yarn run start"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^12.0.6",
     "typescript": "^4.2.4"
