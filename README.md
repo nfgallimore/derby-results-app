@@ -7,3 +7,8 @@ npm install
 npm run timer
 ```
 
+* to test, run this command:
+```
+node udpSend2.js
+```
+
