@@ -10,7 +10,7 @@ function udpInit(){
         server.on('message', (msg: any, rinfo: any) => {
           console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
 	  const msgString = msg.toString('utf8');
-	  let regexp = /lane\s*(\d)\s+(\d+)/i;
+	  let regexp = /lane\s*(\d)\s+(\d+\.\d\d\d)/i;
 	  const found=msgString.match(regexp);
 	  
 	
@@ -24,11 +24,12 @@ function udpInit(){
 		return;
 	  }
 	  if(udpTimerSpan){
+		  const ms=found[2].replace(".","");
 	          const detailObject={
 			lane: found[1],
-			ms: found[2],
+			ms: ms,
 		  };
-		  console.log(`server sending via ${udpTimerSpan}`);
+		  console.log(`server sending ${JSON.stringify(detailObject)} via ${udpTimerSpan}`);
 		  const event = new CustomEvent('udpTimer', { detail: JSON.stringify(detailObject)});
 		  udpTimerSpan.dispatchEvent(event);
 	}
