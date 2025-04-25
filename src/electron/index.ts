@@ -20,7 +20,9 @@ app.on('ready', () => {
   // load a website to display
   //eWindow.loadURL(`https://www.google.com`);
   //eWindow.loadURL(`file://${__dirname}/../public/index.html`);
-  eWindow.loadURL('https://cf.derby.rr1.us');
+
+  //eWindow.loadURL('https://cf.derby.rr1.us');
+  eWindow.loadURL('https://go.rr1.us');
   //eWindow.loadURL('http://0.0.0.0:8080');
   //eWindow.webContents.openDevTools()
 
