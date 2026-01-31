@@ -1,4 +1,4 @@
-# Instructions for running electron derby app
+# Instructions for running communication service for the electron derby app
 * Eventually this is intended to be distributed as a windows msi or a mac dmg
 * For now you will need node and npm installed on the machine as pre-requisites
 * run the following:
